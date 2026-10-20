@@ -14,6 +14,21 @@ int indexOf(char c, const char *str)
     }
     return count;
 }
+void indexOf_test_case_5()
+{
+    int r = indexOf('s', "soap"); // test negative numbers j, should return null
+    cout << "Expected: NULL" << endl;
+    if (r == NULL)
+    {
+        cout << "Actual: NULL" << endl;
+    }
+    else
+    {
+        cout << "Actual: " << r << endl;
+    }
+
+    delete r; // delete after so you can resuse r
+}
 main()
 {
     char c;
