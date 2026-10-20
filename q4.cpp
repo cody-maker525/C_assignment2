@@ -8,6 +8,12 @@ new char array of length (j-i) to find the difference and then +1 for the null c
 j, if i or j is less than 0, the character is the null character(means the word is too short for substring i and j
 values) then return null, otherwise loop through the new character from count = 0 and incremenet it. then keep incrementing i
 until it is equal to j then it pops out of the while loop, null character is added and returned.
+test cases:
+test 1: normal word, valid i and j
+test 2: j is out of bounds: returns null
+test 3: i>j return null
+test 4: tests negative i: null
+test 5: tests negative j: null
 */
 
 char *substring(int i, int j, const char *str)
@@ -44,13 +50,11 @@ void substring_test_case_1()
     {
         cout << "Actual: " << r << endl;
     }
-
-    delete[] r; // delete after so you can resuse r
 }
 
 void substring_test_case_2()
 {
-    char *r = substring(5, 2, "truthe"); // test i<j,should return null
+    char *r = substring(5, 2, "truthe"); // test i>j,should return null
     if (r == NULL)
     {
         cout << "Actual: NULL" << endl;
@@ -59,8 +63,6 @@ void substring_test_case_2()
     {
         cout << "Actual: " << r << endl;
     }
-
-    delete[] r; // delete after so you can resuse r
 }
 void substring_test_case_3()
 {
@@ -74,8 +76,6 @@ void substring_test_case_3()
     {
         cout << "Actual: " << r << endl;
     }
-
-    delete[] r; // delete after so you can resuse r
 }
 void substring_test_case_4()
 {
@@ -89,8 +89,6 @@ void substring_test_case_4()
     {
         cout << "Actual: " << r << endl;
     }
-
-    delete[] r; // delete after so you can resuse r
 }
 void substring_test_case_5()
 {
@@ -104,8 +102,6 @@ void substring_test_case_5()
     {
         cout << "Actual: " << r << endl;
     }
-
-    delete[] r; // delete after so you can resuse r
 }
 
 main()

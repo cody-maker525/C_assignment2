@@ -1,7 +1,19 @@
 #include <iostream>
 using namespace std;
 
-// author
+/*
+author: clodagh kelly
+explanation: start int count = 0, increment it in the while loop while the char it is on in str
+is not the null char. this is to find the length. make a new char array of length of str just found using count
+and then + 1 for the null char at end as it stops before it counts the null char.
+put count as 0 again, if letter is equal to char c, put p in that position.
+else, add the current letter to that position.
+test cases:
+test 1: normal string normal chars
+test 2: multiple of the same chars
+test 3: no char c in string, return null
+*/
+
 char *replace(char c, char p, const char *str)
 {
     int count = 0;
@@ -27,15 +39,12 @@ char *replace(char c, char p, const char *str)
     rep[count] = '\0';
     return rep;
 }
-//[function]_name_test_case_[k]
 
 void replace_test_case_1()
 {
     char *r = replace('i', 'p', "string");
     cout << "Expected: strpng" << endl;
     cout << "Actual: " << r << endl;
-
-    delete[] r; // delete after so you can resuse r
 }
 
 void replace_test_case_2()
@@ -43,16 +52,19 @@ void replace_test_case_2()
     char *r = replace('s', 'e', "sstss");
     cout << "Expected: eetee" << endl;
     cout << "Actual: " << r << endl;
-
-    delete[] r; // delete after so you can resuse r
 }
 void replace_test_case_3()
 {
     char *r = replace('t', 'l', "sing");
     cout << "Expected: sing" << endl;
-    cout << "Actual: " << r << endl;
-
-    delete[] r; // delete after so you can resuse r
+    if (r == NULL)
+    {
+        cout << "Actual: NULL" << endl;
+    }
+    else
+    {
+        cout << "Actual: " << r << endl;
+    }
 }
 
 main()
