@@ -6,10 +6,21 @@ explanation: start count at 0, while src is not null,
 if dest[count] becomes null char, return null as this means it's too small to copy onto
 otherwise copy the character of src into dest. after add the null char at the end using value count
 which incremented each time in the while loop and is the length
-test case 1: normal words both, valid
+char copy*
+returns dest; arguments come from test cases
+test case 1: 2 normal valid words
+arguments: dest = "deodorant", src = "treuoroko"
+returns: nothing, prints Expected: result "treuoroko" and the actual result "treuoroko"
+
 test 2: dest is too small
-test 3: src is smaller but prints out dest
+arguments: dest = "pop", src = "polo"
+returns: nothing, prints Expected: NULL and the actual result NULL
+
+test 3: src is smaller but prints out in dest
+arguments: dest = "polllllll", src = "pop"
+returns: nothing, prints expected "pop" and the actual result "pop"
 */
+
 char *copy(char *dest, const char *src)
 {
     int count = 0;

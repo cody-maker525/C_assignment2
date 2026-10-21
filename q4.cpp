@@ -10,10 +10,24 @@ values) then return null, otherwise loop through the new character from count = 
 until it is equal to j then it pops out of the while loop, null character is added and returned.
 test cases:
 test 1: normal word, valid i and j
+arguments: i = 1, j = 5, str = "deodorant"
+returns: nothing, prints expected "eodor" and the actual result "eodor"
+
 test 2: j is out of bounds: returns null
+arguments: i = 5, j = 2, str = "truthe"
+returns: nothing, prints the actual result NULL
+
 test 3: i>j return null
+arguments: i = 0, j = 6, str = "Soap"
+returns: nothing, prints expected NULL and the actual result NULL
+
 test 4: tests negative i: null
+arguments: i = -1, j = 8, str = "Soap"
+returns: nothing, prints expected NULL and the actual result NULL
+
 test 5: tests negative j: null
+arguments: i = 1, j = -8, str = "Soap"
+returns: nothing, prints expected NULL and the actual result NULL
 */
 
 char *substring(int i, int j, const char *str)

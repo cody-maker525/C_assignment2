@@ -10,8 +10,16 @@ put count as 0 again, if letter is equal to char c, put p in that position.
 else, add the current letter to that position.
 test cases:
 test 1: normal string normal chars
+arguments: c = 'i', p = 'p', str = "string"
+returns: nothing, prints expected "strpng" and the actual result "strpng"
+
 test 2: multiple of the same chars
-test 3: no char c in string, return null
+arguments: c = 's', p = 'e', str = "sstss"
+returns: nothing, prints expected "eetee" and the actual result "eetee"
+
+test 3: no char c in string, return string
+arguments: c = 't', p = 'l', str = "sing"
+returns: nothing, prints expected "sing" and the actual result "sing"
 */
 
 char *replace(char c, char p, const char *str)

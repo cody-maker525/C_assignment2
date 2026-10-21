@@ -5,9 +5,19 @@ author: clodagh kelly
 explanation: initialize count as 0, go through the array until hit null pointer while counting up
 and incrementing count, return count as the length
 test cases:
-test 1: length = 5, return 5
-test 2: length = 0, return 0
-test 3: length = 20*/
+
+test 1: normal word
+arguments: str = "trees"
+returns: nothing, prints expected 5 and the actual result 5
+
+test 2: "" length = 0
+arguments: str = ""
+returns: nothing, prints expected 0 and the actual result 0
+
+test 3: 12345678901234567890 length = 20 return 20
+arguments: str = "12345678901234567890"
+returns: nothing, prints expected 20 and the actual result 20
+*/
 unsigned int length(const char *str)
 {
     int count = 0;
