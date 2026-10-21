@@ -4,6 +4,8 @@ using namespace std;
 author: clodagh kelly
 explanation: initialize count as 0, go through the array until hit null pointer while counting up
 and incrementing count, return count as the length
+length takes in a string
+returns an int which is length of the string
 test cases:
 
 test 1: normal word

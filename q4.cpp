@@ -8,6 +8,8 @@ new char array of length (j-i) to find the difference and then +1 for the null c
 j, if i or j is less than 0, the character is the null character(means the word is too short for substring i and j
 values) then return null, otherwise loop through the new character from count = 0 and incremenet it. then keep incrementing i
 until it is equal to j then it pops out of the while loop, null character is added and returned.
+substring takes in int i, int j, const char* str
+returns result char array of a substring between i and j
 test cases:
 test 1: normal word, valid i and j
 arguments: i = 1, j = 5, str = "deodorant"

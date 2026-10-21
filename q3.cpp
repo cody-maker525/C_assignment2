@@ -7,6 +7,8 @@ in index of, start count = 0, do it while the str[count] does
 not equal to the character as it stops and returns the index then check string char by char using count, if the
 character is '\0' then return -1 as this means it is not in the string and we have reached the end, incremenet
 count each time. don't need null case because can return -1 which it prints, unlike null.
+takes in char c and const char *str
+returns an int of index of first occurance of c in str
 
 test case 1, normal char within string,
 arguments: c = 's', str = "soap"

@@ -6,7 +6,7 @@ explanation: start count at 0, while src is not null,
 if dest[count] becomes null char, return null as this means it's too small to copy onto
 otherwise copy the character of src into dest. after add the null char at the end using value count
 which incremented each time in the while loop and is the length
-char copy*
+char copy* takes in char *dest, const char *src
 returns dest; arguments come from test cases
 test case 1: 2 normal valid words
 arguments: dest = "deodorant", src = "treuoroko"
@@ -21,15 +21,25 @@ arguments: dest = "polllllll", src = "pop"
 returns: nothing, prints expected "pop" and the actual result "pop"
 */
 
+unsigned int length(const char *str)
+{
+    int count = 0;
+    while (str[count] != '\0')
+    {
+        count++;
+    }
+    return count;
+}
+
 char *copy(char *dest, const char *src)
 {
+    if ((int)length(src) > (int)length(dest))
+    {
+        return NULL;
+    }
     int count = 0;
     while (src[count] != '\0')
     {
-        if (dest[count] == '\0')
-        {
-            return NULL;
-        }
         dest[count] = src[count];
         count++;
     }

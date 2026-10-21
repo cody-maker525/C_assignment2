@@ -8,6 +8,8 @@ is not the null char. this is to find the length. make a new char array of lengt
 and then + 1 for the null char at end as it stops before it counts the null char.
 put count as 0 again, if letter is equal to char c, put p in that position.
 else, add the current letter to that position.
+replace takes in char c, char p, const char *str
+returns replaced string with any char c before now char p
 test cases:
 test 1: normal string normal chars
 arguments: c = 'i', p = 'p', str = "string"
